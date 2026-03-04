@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Shiny Alchemist" script="shiny_alchemist.lua" walkinterval="3000" floorchange="0" speed="0">
+  <health now="150" max="150"/>
+  <look type="516" head="114" body="91" legs="86" feet="0"/>
+  <parameters>
+    <parameter key="message_greet" value="Ola treinador! Eu ensino como funciona a forja de stones. Diga {help} para saber mais."/>
+    <parameter key="message_farewell" value="Boas forjas!"/>
+    <parameter key="message_walkaway" value="Volte quando quiser aprender mais."/>
+    <parameter key="message_idletimeout" value="Até breve!"/>
+  </parameters>
+</npc>

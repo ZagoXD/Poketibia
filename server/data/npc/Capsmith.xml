@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Capsmith" script="capsmith.lua" walkinterval="3000" floorchange="0" speed="0">
+  <health now="150" max="150"/>
+  <look type="516" head="91" body="114" legs="86" feet="0"/>
+  <parameters>
+    <parameter key="message_greet" value="Hey, trainer! I can upgrade IVs using {bottle cap} or {golden bottle cap}. Ask me about them."/>
+    <parameter key="message_farewell" value="Good luck out there!"/>
+    <parameter key="message_walkaway" value="See you!"/>
+    <parameter key="message_idletimeout" value="Come back anytime!"/>
+  </parameters>
+</npc>

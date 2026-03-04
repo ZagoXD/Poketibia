@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="TVNPC" speed="0">
+<health now="670" max="660"/>
+<look type="511" head="114" body="114" legs="114" feet="114"/>
+<parameters>
+</parameters>
+</npc>

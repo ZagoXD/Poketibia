@@ -1,0 +1,637 @@
+----- 21/01/2011 21:23:27 - Nosferat (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 110 110 180 163 108 180 106 132 140 131
+Last Packet: 110 002 172 023 016 000 100 101 102 101 097 116 101 100 032 107
+Player Position: [1010,1016,7]
+Player Name: Lucci (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 110) (MainWindow = 25329448), reason:
+Communication.cpp 2136: exception occurred (Container = 2), reason:
+Objects.cpp 280: exception occurred (Type = 8041) (Flag = 11), reason:
+Objects.cpp 277: assertion failed (Type = 8041) (ObjectProperties->high() = 7946), reason:
+In(Type,ObjectProperties->low(),ObjectProperties->high())
+Fri Jan 21 21:22:32 2011
+Debug Assertion 8.54 Objects.cpp 277
+
+----- 16/03/2011 23:03:21 - Loko (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 142 103 109 142 142 142 103 109 142 142
+Last Packet: 142 113 005 000 016 019 002 000 000 000 000 000 000 000 000 000
+Player Position: [1031,1037,7]
+Player Name: Loko (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 0 MaW: 1857F28 MoW: 0), reason:
+Control.cpp 1715: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+GUI.cpp 1479: exception occurred (Surface = 1), reason:
+MapWindow.cpp 869: exception occurred (Surface = 1), reason:
+MapWindow.cpp 549: exception occurred (Obj = 4529), reason:
+MapWindow.cpp 1146: exception occurred (posx = 224) (posy = 184), reason:
+MapWindow.cpp 1049: exception occurred (i = 0) (Creatures[i]->OutfitType = 531), reason:
+MapWindow.cpp 1028: exception occurred, reason:
+MapWindow.cpp 1257: outfit has not all four directions (Creature->OutfitType = 531) (GetOutfitPatternWidth(Creature->OutfitType) = 1)
+Wed Mar 16 23:02:09 2011
+Debug Assertion 8.54 MapWindow.cpp 1257
+
+----- 20/03/2011 18:03:55 - Loko (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 143 143 131 180 180 162 142 180 160 162
+Last Packet: 010 233 003 000 016 050 000 000 100 005 004 002 004 007 203 018
+Player Position: [1029,1026,7]
+Player Name: Klait (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 23691048), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Sun Mar 20 18:03:44 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 28/05/2011 19:38:24 - Zzzetst (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 109 106 030 106 106 106 106 106 030 106
+Last Packet: 109 158 003 005 004 007 002 158 003 006 004 007 103 163 017 025
+Player Position: [926,1030,7]
+Player Name: Zzzetst (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 109) (MainWindow = 23822120), reason:
+Communication.cpp 2110: exception occurred, reason:
+Communication.cpp 2101: MoveCreature has been received for a coordinate where there is no bank as first object [bug0000484], reason:
+ sx: 8 sy: 6 sz: 0
+ Position: 2
+ zx: 8 zy: 7 zz: 0
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 926 abs_sy: 1029 abs_sz: 7
+ abs_zx: 926 abs_zy: 1030 abs_zz: 7
+ Start Cylinder (1):  (870,0) (4539,0) (99,268436457)
+ Start Cylinder (2):  (870,0) (4539,0) (99,268436457)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (7610,0) (7611,0) (7612,0) (7613,0) (7614,0) (7615,0) (7616,0) (7617,0) (4541,0) (7604,0)
+ Destination Cylinder (2):  (7604,0) (4541,0) (7617,0) (7616,0) (7615,0) (7614,0) (7613,0) (7612,0) (7611,0) (7610,0)
+ ID: 268436457 Name: Zzzetst
+ RealX: 926 RealY: 1030 RealZ: 7
+ DeltaX: 0 DeltaY: 0
+Sat May 28 19:38:06 2011
+Debug Assertion 8.54 Communication.cpp 2101
+
+----- 29/05/2011 16:06:09 - Aezeruis (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 110 143 143 131 180 180 162 141 130 161
+Last Packet: 110 000 169 013 023 000 112 111 107 101 109 111 110 032 104 101
+Player Position: [936,1030,7]
+Player Name: Aezeruis (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 0 MaW: 14F98E0 MoW: 0), reason:
+Control.cpp 1715: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 122: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 707: exception occurred (Surface = 1) ((int) Child = 118707336), reason:
+DialogElements.cpp 1177: exception occurred (Surface = 1), reason:
+Graphics.cpp 1183: exception occurred (Debug: 3 Type: 3497 PX: 1 PY: 1 Ph: 1 W: -1 H: -1 L: -1 X: -1 Y: -1 L: -1 S: -1), reason:
+NWin32Exception.cpp 75: win32 exception occurred, reason:
+integer divide by zero
+Sun May 29 16:05:53 2011
+Debug Assertion 8.54 NWin32Exception.cpp 75
+
+----- 10/06/2011 22:34:11 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 150 180 030 030 030 030 030 030 170 030
+Last Packet: 150 008 000 000 000 198 012 060 046 000 000 000 000 180 027 078
+Player Position: [934,1029,7]
+Player Name: Megatest (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 150) (MainWindow = 23101176), reason:
+Communication.cpp 2578: exception occurred, reason:
+Network.cpp 550: exception occurred, reason:
+Utils.cpp 550: assertion failed (Position = 23) (Size-Length = -6989), reason:
+Position<=Size-Length
+Fri Jun 10 22:33:35 2011
+Debug Assertion 8.54 Utils.cpp 550
+
+----- 10/06/2011 22:34:55 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 150 143 143 131 180 180 162 141 130 161
+Last Packet: 150 001 000 000 000 198 012 061 046 000 000 000 000 180 027 078
+Player Position: [923,1065,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 150) (MainWindow = 21862880), reason:
+Communication.cpp 2578: exception occurred, reason:
+Network.cpp 550: exception occurred, reason:
+Utils.cpp 550: assertion failed (Position = 23) (Size-Length = -6989), reason:
+Position<=Size-Length
+Fri Jun 10 22:34:13 2011
+Debug Assertion 8.54 Utils.cpp 550
+
+----- 10/06/2011 22:39:26 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 150 030 030 030 030 030 030 030 030 180
+Last Packet: 150 004 000 000 000 198 012 002 037 000 000 000 000 180 027 078
+Player Position: [923,1065,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 150) (MainWindow = 21731808), reason:
+Communication.cpp 2578: exception occurred, reason:
+Network.cpp 550: exception occurred, reason:
+Utils.cpp 550: assertion failed (Position = 23) (Size-Length = -6989), reason:
+Position<=Size-Length
+Fri Jun 10 22:38:34 2011
+Debug Assertion 8.54 Utils.cpp 550
+
+----- 10/07/2011 16:38:47 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 103 109 103 109 131 100 108 180 107 143
+Last Packet: 109 162 003 065 004 007 001 162 003 066 004 007 103 163 017 000
+Player Position: [930,1090,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 23697896), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Sun Jul 10 16:36:38 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 10/07/2011 16:46:17 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 143 143 131 180 180 180 180 180 162 141
+Last Packet: 010 234 003 000 016 050 000 000 100 162 003 067 004 007 103 000
+Player Position: [930,1091,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 22780392), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Sun Jul 10 16:45:39 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 10/07/2011 16:55:51 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 131 107 180 103 109 104 109 030 030 030
+Last Packet: 180 018 007 000 047 105 032 052 056 050 048 107 161 003 068 004
+Player Position: [929,1092,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 23763432), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Sun Jul 10 16:52:05 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 10/07/2011 17:11:53 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 170 143 030 130 030 030 130 030 030 130
+Last Packet: 143 235 003 000 016 190 000 170 013 000 000 000 006 000 065 097
+Player Position: [929,1094,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 22059496), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Sun Jul 10 17:11:25 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 18/07/2011 18:18:54 - Aaaana (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 107 143 143 143 109 143 143 143 109 131
+Last Packet: 143 236 003 000 064 000 000 143 236 003 000 064 166 000 107 152
+Player Position: [918,1087,7]
+Player Name: Aaaana (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 26181416), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Mon Jul 18 18:17:38 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 21/07/2011 01:54:36 - Admin (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 171 107 101 109 030 104 101 109 101 109
+Last Packet: 171 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [931,1031,7]
+Player Name: Admin (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 19 MaW: 1857F28 MoW: 0), reason:
+Control.cpp 1685: exception occurred (Type = 19), reason:
+Dialogs.cpp 365: exception occurred, reason:
+Dialogs.cpp 2401: assertion failed (_NumberOfChannels = 0), reason:
+_NumberOfChannels>0
+Thu Jul 21 01:53:52 2011
+Debug Assertion 8.54 Dialogs.cpp 2401
+
+----- 21/07/2011 01:55:48 - Admin (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 171 171 143 143 142 160 131 180 180 180
+Last Packet: 171 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [936,1030,7]
+Player Name: Mega Tets (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 19 MaW: 3F7F28 MoW: 0), reason:
+Control.cpp 1685: exception occurred (Type = 19), reason:
+Dialogs.cpp 365: exception occurred, reason:
+Dialogs.cpp 2401: assertion failed (_NumberOfChannels = 0), reason:
+_NumberOfChannels>0
+Thu Jul 21 01:54:41 2011
+Debug Assertion 8.54 Dialogs.cpp 2401
+
+----- 23/07/2011 03:11:54 - Admin (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 109 109 030 108 030 170 030 170 108 170
+Last Packet: 109 090 004 207 002 006 003 090 004 208 002 006 103 104 004 000
+Player Position: [1114,719,6]
+Player Name: Vashziin (Kpdo-beta)
+Player Action: 049 056 057 046 050 057 046 050 051 049 046 052 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 109) (MainWindow = 30441256), reason:
+Communication.cpp 2110: exception occurred, reason:
+Communication.cpp 2101: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 8 sy: 6 sz: 1
+ Position: 3
+ zx: 8 zy: 7 zz: 1
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 1114 abs_sy: 719 abs_sz: 6
+ abs_zx: 1114 abs_zy: 720 abs_zz: 6
+ Start Cylinder (1):  (4394,0) (6377,0) (99,268461149)
+ Start Cylinder (2):  (4394,0) (6377,0) (99,268461149)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (4395,0) (6381,0) (6005,0) (99,268471363)
+ Destination Cylinder (2):  (4395,0) (6381,0) (99,268471363) (6005,0)(-)(-)(-)(-)(-)(-)
+Sat Jul 23 02:56:04 2011
+Debug Assertion 8.54 Communication.cpp 2101
+
+----- 28/07/2011 18:42:20 - Admin (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 162 142 143 143 131 180 180 180 180 162
+Last Packet: 010 237 003 000 016 050 000 000 011 002 002 002 002 000 000 000
+Player Position: [927,1096,7]
+Player Name: Admin (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 25394984), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Thu Jul 28 18:41:00 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 28/07/2011 18:44:09 - Admin (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 143 143 131 180 180 180 180 162 142 180
+Last Packet: 010 234 003 000 016 050 000 000 100 159 003 072 004 007 168 017
+Player Position: [927,1096,7]
+Player Name: Admin (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = -1) (MainWindow = 25723696), reason:
+Network.cpp 491: exception occurred, reason:
+Network.cpp 478: exception occurred, reason:
+Network.cpp 444: packet size does not fit to symmetric encryption (PacketSize = 15341)
+Thu Jul 28 18:42:21 2011
+Debug Assertion 8.54 Network.cpp 444
+
+----- 31/07/2011 13:46:28 - Admin (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 030 200 107 107 107 107 030 104 109 101
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [922,1085,7]
+Player Name: Admin (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 0 MaW: 17C8330 MoW: 15B8990), reason:
+Control.cpp 1715: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+GUI.cpp 1479: exception occurred (Surface = 1), reason:
+GUI.cpp 1479: exception occurred (Surface = 1), reason:
+GUI.cpp 1479: exception occurred (Surface = 1), reason:
+DialogElements.cpp 986: exception occurred (Surface = 1), reason:
+Graphics.cpp 1244: exception occurred (Surface = 1) (OutfitType = 717), reason:
+NWin32Exception.cpp 75: win32 exception occurred, reason:
+integer divide by zero
+Sun Jul 31 13:44:44 2011
+Debug Assertion 8.54 NWin32Exception.cpp 75
+
+----- 22/08/2011 15:31:56 - Admin (127.0.0.1) -----
+Comment: ][
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 142 142 030 170 030 170 030 030 030 030
+Last Packet: 142 234 003 000 016 043 003 006 000 065 000 002 142 236 003 000
+Player Position: [957,767,7]
+Player Name: Admin (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 0 MaW: F07F28 MoW: 0), reason:
+Control.cpp 1715: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 122: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 707: exception occurred (Surface = 1) ((int) Child = 21859440), reason:
+ContentWindows.cpp 2668: exception occurred (Surface = 1), reason:
+Graphics.cpp 1244: exception occurred (Surface = 1) (OutfitType = 811), reason:
+NWin32Exception.cpp 75: win32 exception occurred, reason:
+integer divide by zero
+Mon Aug 22 15:30:46 2011
+Debug Assertion 8.54 NWin32Exception.cpp 75
+
+----- 25/09/2011 15:36:31 - Glade (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 150 030 030 030 150 030 030 030 150 030
+Last Packet: 150 018 000 000 000 236 029 032 203 000 000 000 000 000 000 000
+Player Position: [2045,2040,7]
+Player Name: Mastercraft (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 150) (MainWindow = 23625512), reason:
+Communication.cpp 2578: exception occurred, reason:
+Network.cpp 550: exception occurred, reason:
+Utils.cpp 501: assertion failed (Position = 21) (Size = 21), reason:
+Position<=Size-2
+Sun Sep 25 15:36:00 2011
+Debug Assertion 8.54 Utils.cpp 501
+
+----- 25/09/2011 15:40:30 - Frenzi (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 150 030 030 030 030 030 150 030 030 030
+Last Packet: 150 013 000 000 000 047 030 010 032 000 000 000 000 000 000 000
+Player Position: [2055,1986,7]
+Player Name: Frenzi (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 150) (MainWindow = 23626544), reason:
+Communication.cpp 2578: exception occurred, reason:
+Network.cpp 550: exception occurred, reason:
+Utils.cpp 501: assertion failed (Position = 21) (Size = 21), reason:
+Position<=Size-2
+Sun Sep 25 15:40:17 2011
+Debug Assertion 8.54 Utils.cpp 501
+
+----- 02/10/2011 12:07:48 - Myfemale (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 108 109 100 108 109 109 100 108 109 109
+Last Packet: 108 061 003 015 006 009 003 100 061 003 016 006 009 053 017 109
+Player Position: [829,1551,9]
+Player Name: Leddyea (Pandora)
+Player Action: 050 049 054 046 050 052 053 046 050 049 056 046 049 051 054 058 055 049 055 051
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 108) (MainWindow = 30193936), reason:
+Communication.cpp 1861: exception occurred (rx = 8) (ry = 6), reason:
+Communication.cpp 1851: Object is not where it should be, reason:
+ hx: 8 hy: 6 hz: 2 Pos: 3
+ Cylinder (1):  (4404,0) (5822,0) (99,268503095)
+ Cylinder (2):  (4404,0) (5822,0) (99,268503095)(-)(-)(-)(-)(-)(-)(-)
+Sun Oct 02 11:20:42 2011
+Debug Assertion 8.54 Communication.cpp 1851
+
+----- 04/10/2011 22:18:49 - Amagad New (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q660
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 171 030 132 101 109 143 143 131 180 180
+Last Packet: 171 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1038,1061,7]
+Player Name: Mastercraft (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1720: exception occurred (MessageType: 19 MaW: 327F28 MoW: 0), reason:
+Control.cpp 1685: exception occurred (Type = 19), reason:
+Dialogs.cpp 365: exception occurred, reason:
+Dialogs.cpp 2401: assertion failed (_NumberOfChannels = 0), reason:
+_NumberOfChannels>0
+Tue Oct 04 22:18:20 2011
+Debug Assertion 8.54 Dialogs.cpp 2401
+
+----- 01/12/2011 21:55:13 - Aninbru (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 6400 @ 2.
+Video Card: NVIDIA GeForce 8500 GT
+Last Packet Types: 108 109 100 108 030 109 100 108 109 100
+Last Packet: 109 201 003 159 006 008 002 201 003 160 006 008 108 201 003 159
+Player Position: [969,1695,8]
+Player Name: Leddyea (Pandora)
+Player Action: 050 049 054 046 050 052 053 046 050 049 056 046 049 051 051 058 055 049 055 051
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 108) (MainWindow = 39354160), reason:
+Communication.cpp 1861: exception occurred (rx = 8) (ry = 6), reason:
+Communication.cpp 1851: Object is not where it should be, reason:
+ hx: 8 hy: 6 hz: 2 Pos: 3
+ Cylinder (1):  (103,0) (4736,0) (99,268940000)
+ Cylinder (2):  (103,0) (4736,0) (99,268940000)(-)(-)(-)(-)(-)(-)(-)
+Wed Nov 30 16:18:55 2011
+Debug Assertion 8.54 Communication.cpp 1851
+
+----- 29/12/2011 02:19:57 - Aninbru (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 6400 @ 2.
+Video Card: NVIDIA GeForce 8500 GT
+Last Packet Types: 109 109 030 130 130 030 130 030 030 130
+Last Packet: 109 044 004 123 004 007 001 045 004 123 004 007 109 044 004 123
+Player Position: [1064,1145,7]
+Player Name: Kaosk (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 109) (MainWindow = 3899176), reason:
+Communication.cpp 2110: exception occurred, reason:
+Communication.cpp 2101: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 12 sy: 8 sz: 0
+ Position: 1
+ zx: 13 zy: 8 zz: 0
+ dx: 1 dy: 0 dz: 0
+ abs_sx: 1068 abs_sy: 1147 abs_sz: 7
+ abs_zx: 1069 abs_zy: 1147 abs_zz: 7
+ Start Cylinder (1):  (409,0)
+ Start Cylinder (2):  (409,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (409,0) (99,268436517)
+ Destination Cylinder (2):  (409,0) (99,268436517)(-)(-)(-)(-)(-)(-)(-)(-)
+Thu Dec 29 02:03:58 2011
+Debug Assertion 8.54 Communication.cpp 2101
+
+----- 29/12/2011 02:35:32 - Megai (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 6400 @ 2.
+Video Card: NVIDIA GeForce 8500 GT
+Last Packet Types: 109 103 109 030 107 107 130 030 107 107
+Last Packet: 109 045 004 122 004 007 001 045 004 123 004 007 103 163 017 112
+Player Position: [1069,1147,7]
+Player Name: Megai (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 109) (MainWindow = 32947336), reason:
+Communication.cpp 2110: exception occurred, reason:
+Communication.cpp 2101: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 8 sy: 5 sz: 0
+ Position: 1
+ zx: 8 zy: 6 zz: 0
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 1069 abs_sy: 1146 abs_sz: 7
+ abs_zx: 1069 abs_zy: 1147 abs_zz: 7
+ Start Cylinder (1):  (409,0)
+ Start Cylinder (2):  (409,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (409,0) (99,268436515)
+ Destination Cylinder (2):  (409,0) (99,268436515)(-)(-)(-)(-)(-)(-)(-)(-)
+Thu Dec 29 02:35:12 2011
+Debug Assertion 8.54 Communication.cpp 2101
+
+----- 29/12/2011 20:09:42 - Aninbru (127.0.0.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Home Premium Edition 32 Bit in BRA
+Processor: Intel Core 2 6400 @ 2.
+Video Card: NVIDIA GeForce 8500 GT
+Last Packet Types: 106 180 109 130 030 109 130 030 109 030
+Last Packet: 180 018 008 000 047 110 032 104 101 110 114 121 106 046 004 123
+Player Position: [1070,1148,7]
+Player Name: Lupus (Pokemon Dash)
+Player Action: 049 050 055 046 048 046 048 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 992: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1330: exception occurred (Type = 106) (MainWindow = 34111272), reason:
+Communication.cpp 1743: exception occurred (rx = 8) (ry = 5), reason:
+Communication.cpp 1550: exception occurred (Type = 97) (CreatureID = -2147482587), reason:
+Communication.cpp 1478: outfit has not all four directions (Creature->OutfitType = 169) (GetOutfitPatternWidth(Creature->OutfitType) = 1)
+Thu Dec 29 20:09:11 2011
+Debug Assertion 8.54 Communication.cpp 1478
+

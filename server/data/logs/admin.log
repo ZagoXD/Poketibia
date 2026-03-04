@@ -1,0 +1,9 @@
+[05/01/2012 22:31:56] (Error - void ServicePort::open(uint16_t)) NETWORK: Foi feita uma tentativa de acesso a um soquete de uma maneira que é proibida pelas permissões de acesso
+[27/12/2019 14:11:59] (Notice - virtual void ProtocolGame::parsePacket(NetworkMessage&)) PLAYER: [GOD]Ticho sent unknown byte: 0x28f80c
+
+[27/12/2019 14:12:07] (Notice - virtual void ProtocolGame::parsePacket(NetworkMessage&)) PLAYER: [GOD]Ticho sent unknown byte: 0x28f80c
+
+[27/12/2019 14:12:08] (Notice - virtual void ProtocolGame::parsePacket(NetworkMessage&)) PLAYER: [GOD]Ticho sent unknown byte: 0x28f80c
+
+[27/12/2019 14:12:10] (Notice - virtual void ProtocolGame::parsePacket(NetworkMessage&)) PLAYER: [GOD]Ticho sent unknown byte: 0x28f80c
+

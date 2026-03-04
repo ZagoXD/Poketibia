@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<globalevents>
+	<globalevent name="WebDepotQueueTick" interval="30" event="script" value="web_depot_queue.lua"/>
+	<globalevent name="market_cleanup" interval="1296000" event="script" value="market_cleanup.lua"/>
+	<globalevent name="save" interval="1800" event="script" value="save.lua"/>
+	<globalevent name="clean" interval="7200" event="script" value="clean.lua"/>
+
+
+	<globalevent name="serverstart" type="start" event="script" value="start.lua"/>
+
+	<globalevent name="playersrecord" type="record" event="script" value="record.lua"/>
+
+	<globalevent name="GoldenArena1" time="2:50" event="script" value="Golden Arena.lua"/>
+	<globalevent name="GoldenArena2" time="7:50" event="script" value="Golden Arena.lua"/>
+	<globalevent name="GoldenArena3" time="11:50" event="script" value="Golden Arena.lua"/>
+	<globalevent name="GoldenArena4" time="16:50" event="script" value="Golden Arena.lua"/>
+	<globalevent name="GoldenArena5" time="21:50" event="script" value="Golden Arena.lua"/>
+	<globalevent name="RaidAutoSpawn" interval="1800" event="script" value="raid_autospawn.lua"/>
+	<globalevent name="RaidAutoSpawnStartup" type="startup" event="script" value="raid_autospawn.lua"/>
+
+
+	<globalevent name="DailyTournament" time="19:50" event="script" value="tournament_schedule.lua"/>
+	<!-- <globalevent name="timer_example" time="21:35" event="script" value="my_script.lua"/> -->
+
+</globalevents>

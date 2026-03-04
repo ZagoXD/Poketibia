@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lava Magmar" nameDescription="a lava magmar" race="fire" experience="4000" speed="117" manacost="0">
+    <health now="300" max="300"/>
+    <look type="427" head="55" body="80" legs="95" feet="113" corpse="11912"/>
+    <targetchange interval="10000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag staticattack="97"/>
+        <flag runonhealth="0"/>
+        <flag hungerdelay="18"/>
+    </flags>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Scratch" interval="2052" chance="30" range="1"/>
+        <attack name="Fire Punch" interval="2046" chance="30" range="1"/>
+        <attack name="Ember" interval="2058" chance="30" range="6"/>
+        <attack name="Flamethrower" interval="2040" chance="30" range="4"/>
+        <attack name="Fireball" interval="2093" chance="30" range="6"/>
+        <attack name="Fire Blast" interval="3027" chance="25" range="5"/>
+        <attack name="Magma Storm" interval="4121" chance="25" range="4"/>
+	<attack name="Sunny Day" interval="4121" chance="15" range="4"/>
+    </attacks>
+    <defenses armor="0" defense="0">
+	</defenses>
+    <voices interval="5000" chance="20">
+        <voice sentence="MAGMAR!"/>
+    </voices>
+    <loot>
+        <item id="11447" chance="1000" count="1" countmax="1"/>
+    </loot>
+    <script>
+        <event name="Spawn"/>
+        <event name="LootMark"/>
+    </script>
+</monster>

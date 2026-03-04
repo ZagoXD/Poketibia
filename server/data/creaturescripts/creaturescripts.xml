@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<creaturescripts>
+	<event type="login" name="VipFlagLogin" script="vip_flag.lua"/>
+	<event type="spawn" name="VipFlagSpawn" script="vip_flag.lua"/>
+	<event type="walk"  name="VipFlagWalk"  script="vip_flag.lua"/>
+	<event type="login" name="RemoveCoinCase" script="remove_coincase.lua"/>
+	
+	<event type="login" name="ExpBoostLogin" script="exp_boost.lua"/>
+	<event type="logout" name="ExpBoostLogout" script="exp_boost.lua"/>
+	<event type="login"  name="ShinyCharmLogin" script="shiny_charm_login.lua"/>
+	<event type="login"  name="MegaCharmLogin" script="mega_charm_login.lua"/>
+
+  	<event type="logout" name="ShinyCharmLogout" script="shiny_charm_logout.lua"/>
+  	<event type="kill"   name="ShinyCharmKill" script="shiny_charm_kill.lua"/>
+	<event type="login"  name="MegaCharmLogin" script="mega_charm_login.lua"/>
+  	<event type="logout" name="MegaCharmLogout" script="mega_charm_logout.lua"/>
+  	<event type="kill"   name="MegaCharmKill" script="mega_charm_kill.lua"/>
+
+	<event type="login" name="RaidLogin" script="raids_player.lua"/>
+	<event type="logout" name="RaidLogout" script="raids_player.lua"/>
+	<event type="kill" name="RaidKill" script="raids_player.lua"/>
+	<event type="preparedeath" name="RaidDeath" script="raids_player.lua"/>
+	<event type="death" name="RaidBossDeath" script="raids_boss.lua"/>
+	<event type="kill" name="AutoLootKill" script="autoloot.lua"/>
+	<event type="death" name="LootMark" event="script" value="loot_mark.lua"/>
+	<event type="login" name="FirstLogin" script="firstlogin.lua"/>
+	<event type="login"  name="PokebarWatcherLogin"  event="script" value="pokebar_watcher.lua"/>
+	<event type="logout" name="PokebarWatcherLogout" event="script" value="pokebar_watcher.lua"/>
+	<event type="joinchannel" name="ShowPokedex" event="script" value="newpokedex.lua"/>
+	<event type="leavechannel" name="ClosePokedex" event="script" value="newpokedex.lua"/>
+
+	<event type="kill" name="task_count" script="task.lua"/>
+	<event type="kill" name="dropStone" script="dropStone.lua"/>
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+
+
+	<event type="receivemail" name="Mail" event="script" value="mail.lua"/>
+	<event type="kill" name="DailyKillHook" script="daily_kill_hook.lua"/>
+	<event type="reportbug" name="SaveReportBug" script="reportbug.lua"/>
+
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+
+	<event type="death" name="Experience" event="script" value="pokeexp.lua"/>
+
+	<event type="spawn" name="Spawn" event="script" value="spawn.lua"/>
+
+	<event type="think" name="t" event="script" value="wildpoke.lua"/>
+
+	<event type="statschange" name="GeneralConfiguration" event="script" value="exp2.0.lua"/>
+	<event type="advance" name="EffectOnAdvance" event="script" value="levelup.lua"/>
+
+
+	<event type="direction" name="DirectionSystem" event="script" value="wildpoke.lua"/>
+	<event type="attack" name="AttackSystem" event="script" value="wildpoke.lua"/>
+	<event type="cast" name="CastSystem" event="script" value="wildpoke.lua"/>
+	<event type="target" name="WildAttack" event="script" value="playerattack.lua"/>
+
+
+	<event type="look" name="LookSystem" event="script" value="look.lua"/>
+
+
+	<event type="death" name="SummonDeath" event="script" value="goback.lua"/>
+	<event type="logout" name="PlayerLogout" event="script" value="goback.lua"/>
+
+<!-- TV SYSTEM -->
+	<event type="extendedopcode" name="TV_ExtOP" script="tvsys.lua"/>
+	<event type="login"          name="TV_Login"   script="tvsys.lua"/>
+	<event type="logout"         name="TV_Logout"  script="tvsys.lua"/>
+	<!--<event type="closechannel"   name="TV_ChatClose" script="tvsys.lua"/>-->
+
+	<event type="extendedopcode" name="Duel_ExtOP" event="script" value="duelsys.lua"/>
+
+
+	<event type="traderequest" name="T2" event="script" value="trade system.lua"/>
+
+	<event type="tradeaccept" name="T1" event="script" value="trade system.lua"/>
+	
+	<event type="extendedopcode" name="Opcode" event="script" value="opcodes/opcode.lua"/>
+	<event type="extendedopcode" name="EmeraldShop" event="script" value="opcodes/emerald_shop.lua"/>
+	<event type="logout" name="EliteLogout" event="script" value="elite_logout.lua"/>
+
+	<event type="logout" name="TournamentLogout" event="script" value="tournament_logout.lua"/>
+</creaturescripts>

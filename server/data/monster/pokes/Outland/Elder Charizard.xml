@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Elder Charizard" nameDescription="a elder charizard" race="fire" experience="4000" speed="147" manacost="0">
+    <health now="410" max="410"/>
+  <look type="645" head="80" body="95" legs="95" feet="113" corpse="12425"/>
+  <targetchange interval="10000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+<flags>
+ <flag summonable="1"/>
+ <flag attackable="1"/>
+ <flag hostile="1"/>
+ <flag illusionable="1"/>
+ <flag convinceable="1"/>
+ <flag pushable="1"/>
+ <flag canpushitems="0"/>
+ <flag canpushcreatures="0"/>
+ <flag targetdistance="1"/>
+ <flag staticattack="97"/>
+ <flag runonhealth="0"/>
+ <flag hungerdelay="17"/>
+</flags>
+
+<attacks>
+        <attack name="melee" interval="1000" chance="100" range="1" min="-50" max="-100"/>
+        <attack name="Dragon Claw" interval="450" chance="5" range="1"/>
+        <attack name="Ember" interval="400" chance="10" range="4"/>
+        <attack name="Flamethrower" interval="550" chance="6" range="6"/>
+		<attack name="Fireball" interval="450" chance="5" range="6"/>
+        <attack name="Fire Fang" interval="600" chance="6" range="3"/>
+        <attack name="Raging Blast" interval="900" chance="7" range="6"/>
+        <attack name="Fire Blast" interval="1000" chance="9" range="6"/>
+        <attack name="Wing Attack" interval="800" chance="9" range="6"/>
+		<attack name="Magma Storm" interval="1000" chance="8" range="6"/>
+		
+</attacks>
+
+
+<defenses armor="0" defense="0">
+</defenses>
+
+ <voices interval="5000" chance="10">
+ <voice sentence="CHARIZARD!"/>
+ </voices>
+
+  <loot>
+        <item id="11447" chance="1500" count="1" countmax="1"/>
+  </loot>
+
+<script>
+<event name="Spawn"/>
+</script>
+</monster>
