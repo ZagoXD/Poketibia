@@ -1,0 +1,105 @@
+UIWindow
+  id: movesui
+  size: 460 500
+  anchors.centerIn: parent
+  @onEscape: self:destroy()
+
+  Panel
+    id: background
+    anchors.fill: parent
+    image-source: images/moves.png
+    image-repeat: false
+    margin: 0
+    padding: 0
+    focusable: false
+
+  Panel
+    id: topPanel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    height: 60
+    layout: verticalBox
+    margin: 10
+
+    Label
+      id: title
+      text: Moves - ?
+      text-align: center
+
+    Label
+      id: info
+      text: Selected: 0/0
+      text-align: center
+
+  UIScrollArea
+    id: scroll
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: topPanel.bottom
+    anchors.bottom: bottomPanel.top
+    margin-left: 10
+    margin-right: 10
+    margin-top: 6
+    margin-bottom: 6
+
+    Panel
+      id: content
+      anchors.fill: parent
+      layout: verticalBox
+      padding: 2
+
+  Panel
+    id: bottomPanel
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    height: 44
+    padding: 6
+
+    Button
+      id: refresh
+      text: Refresh
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      width: 90
+
+    Button
+      id: resetButton
+      text: Reset
+      anchors.right: apply.left
+      anchors.bottom: parent.bottom
+      width: 90
+      margin-right: 6
+
+    Button
+      id: apply
+      text: Apply
+      anchors.right: close.left
+      anchors.bottom: parent.bottom
+      width: 90
+      margin-right: 6
+
+    Button
+      id: close
+      text: Close
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      width: 90
+
+MoveButton < Button
+  height: 28
+  focusable: false
+  margin-bottom: 2
+
+  image-size: 22 22
+  image-clip: 0 0 0 0
+  image-color: white
+
+  text-align: left
+  text-offset: 30 0
+
+  background: #00000055
+
+  @onEnter: if not self.isChecked then self:setBackgroundColor('#00000055') end
+  @onLeave: if not self.isChecked then self:setBackgroundColor('#00000055') end

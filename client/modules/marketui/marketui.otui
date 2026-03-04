@@ -1,0 +1,334 @@
+UIWindow
+  id: marketui
+  size: 980 520
+  anchors.centerIn: parent
+  @onEscape: self:destroy()
+
+  Panel
+    id: background
+    anchors.fill: parent
+    image-source: images/bgfull.png
+    image-repeat: false
+    margin: 0
+    padding: 0
+    focusable: false
+
+  Panel
+    id: leftPanel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    width: 300
+    margin: 8
+    padding: 6
+    background: #00000066
+
+    Label
+      text: Create Listing
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      text-align: center
+      margin-bottom: 6
+
+    Label
+      text: Item to sell:
+      anchors.left: parent.left
+      anchors.top: prev.bottom
+      margin-top: 6
+
+    TextEdit
+      id: sellName
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      height: 22
+
+    Label
+      text: Amount:
+      anchors.left: parent.left
+      anchors.top: prev.bottom
+      margin-top: 6
+
+    TextEdit
+      id: sellAmt
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      height: 22
+
+    Label
+      text: Wants (item):
+      anchors.left: parent.left
+      anchors.top: prev.bottom
+      margin-top: 10
+
+    TextEdit
+      id: wantName
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      height: 22
+
+    Label
+      text: Wants (amount):
+      anchors.left: parent.left
+      anchors.top: prev.bottom
+      margin-top: 6
+
+    TextEdit
+      id: wantAmt
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      height: 22
+
+    LoginButton
+      id: createBtn
+      text: Create
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-top: 10
+      height: 25
+
+    HorizontalSeparator
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-top: 8
+      margin-bottom: 8
+
+    LoginButton
+      id: closeBtn
+      text: Close
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      height: 25
+
+  Panel
+    id: rightPanel
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    anchors.left: leftPanel.right
+    margin-top: 8
+    margin-right: 8
+    margin-bottom: 8
+    margin-left: 6
+    padding: 6
+    background: #00000066
+
+    Panel
+      id: topBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 28
+
+      MarketButton
+        id: tabAll
+        text: All
+        width: 60
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+
+      MarketButton
+        id: tabMy
+        text: My
+        width: 60
+        anchors.left: tabAll.right
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 4
+
+      TextEdit
+        id: searchEdit
+        anchors.left: tabMy.right
+        anchors.right: refreshBtn.left
+        anchors.verticalCenter: parent.verticalCenter
+        margin-left: 8
+        margin-right: 6
+        placeholder: Search item...
+
+      MarketButton
+        id: refreshBtn
+        text: Refresh
+        width: 80
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+
+    MarketButton
+      id: claimAllBtn
+      text: Claim All
+      anchors.top: topBar.bottom
+      anchors.right: parent.right
+      width: 90
+      margin-top: 6
+      visible: false
+
+    UIScrollArea
+      id: listScroll
+      anchors.top: claimAllBtn.bottom
+      anchors.left: parent.left
+      anchors.right: listVScroll.left
+      anchors.bottom: paginationBar.top
+      margin-top: 6
+      padding-right: 6
+      vertical-scrollbar: listVScroll
+
+      Panel
+        id: listContent
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        layout: verticalBox
+        layout-spacing: 4
+        padding: 2
+
+    Panel
+      id: paginationBar
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      height: 28
+      background: #00000040
+      padding-left: 6
+      padding-right: 6
+
+      Panel
+        id: pagePrev
+        width: 22
+        height: 22
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        background: #00000000
+        image-source: images/leftarrow.png
+        image-repeat: false
+        track-mouse: true
+        focusable: false
+        phantom: false
+        margin-right: 6
+
+      Label
+        id: pageLabel
+        anchors.left: pagePrev.right
+        anchors.right: pageNext.left
+        anchors.verticalCenter: parent.verticalCenter
+        text: "Page 1 / 1"
+        color: white
+        text-align: center
+
+      Panel
+        id: pageNext
+        width: 22
+        height: 22
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        background: #00000000
+        image-source: images/rightarrow.png
+        image-repeat: false
+        track-mouse: true
+        focusable: false
+        phantom: false
+
+    VerticalScrollBar
+      id: listVScroll
+      anchors.top: claimAllBtn.bottom
+      anchors.right: parent.right
+      anchors.bottom: paginationBar.top
+      width: 13
+      step: 92
+      pixels-scroll: true
+
+OfferRow < Panel
+  height: 92
+  background: #00000000
+  margin-bottom: 10
+  focusable: false
+  track-mouse: true
+  phantom: false
+
+  Panel
+    id: rowFrame
+    anchors.fill: parent
+    image-source: images/market_frame.png
+    image-repeat: false
+
+  Panel
+    id: rowBody
+    anchors.fill: parent
+    margin: 6
+    padding: 6
+    padding-bottom: 10
+    background: #00000000
+
+    Label
+      id: rowSeller
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      text: "seller"
+      color: #CCCCCC
+
+    Panel
+      id: sellBg
+      anchors.left: parent.left
+      anchors.top: rowSeller.bottom
+      margin-top: 6
+      size: 36 36
+      image-source: images/item.png
+      image-repeat: false
+
+    UIItem
+      id: sellIcon
+      size: 32 32
+      anchors.centerIn: sellBg
+
+    Panel
+      id: wantBg
+      anchors.right: parent.right
+      anchors.verticalCenter: sellBg.verticalCenter
+      margin-right: 6
+      size: 36 36
+      image-source: images/item.png
+      image-repeat: false
+
+    UIItem
+      id: wantIcon
+      size: 32 32
+      anchors.centerIn: wantBg
+
+    Label
+      id: rowText
+      anchors.left: sellBg.right
+      anchors.right: wantBg.left
+      anchors.verticalCenter: sellBg.verticalCenter
+      margin-left: 6
+      margin-right: 6
+      text: "..."
+      color: white
+      text-align: center
+
+  MarketButton
+    id: actionBtn
+    text: "..."
+    width: 80
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 8
+    margin-top: 4
+    margin-bottom: 4
+
+  Label
+    id: statusLbl
+    anchors.left: parent.left
+    anchors.right: actionBtn.left
+    anchors.verticalCenter: actionBtn.verticalCenter
+    margin-right: 8
+    text: ""
+    color: #CCCCCC
+    text-align: right
+    visible: false
+
+

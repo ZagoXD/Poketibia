@@ -1,0 +1,11 @@
+Module
+  name: movesui
+  description: Moves selector window
+  author: Nathso
+  autoload: true
+  autoload-priority: 720
+  dependencies: [ game_interface, client_topmenu ]
+  scripts: [ movesui ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

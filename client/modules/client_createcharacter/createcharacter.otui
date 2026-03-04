@@ -1,0 +1,133 @@
+CreateCharacterWindow < LoginWindow
+  id: createCharacterWindow
+  size: 520 420
+  !text: tr('Criar Personagem')
+  @onEscape: CreateCharacter.cancel()
+
+CreateCharacterLabel < Label
+  color: #f0f0f0ff
+  font: sans-bold-16px
+
+CreateCharacterTextEdit < TextEdit
+  color: #f0f0f0ff
+  font: terminus-14px-bold
+  height: 34
+  padding: 8 10 8 10
+  text-offset: 0 1
+
+CreateCharacterButton < LoginButton
+  width: 360
+  height: 25
+
+GenderCard < Panel
+  width: 160
+  height: 170
+  background-color: #00000000
+  border-width: 2
+  border-color: #00000000
+  padding: 8
+
+GenderCardSelected < GenderCard
+  border-color: #6dd36dff
+
+CreateCharacterWindow
+  CreateCharacterLabel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 20
+    margin-left: 20
+    !text: tr('Nome')
+
+  CreateCharacterTextEdit
+    id: ccNameText
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 10
+    width: 460
+
+  CreateCharacterLabel
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 18
+    !text: tr('Genero')
+
+  UIWidget
+    id: genderArea
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 10
+    size: 460 180
+
+    GenderCardSelected
+      id: genderMale
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+
+      UIWidget
+        id: maleImg
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        size: 80 120
+        image-source: images/gender_male.png
+        phantom: true
+
+      Label
+        id: maleLabel
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 8
+        color: #f0f0f0ff
+        font: terminus-14px-bold
+        !text: tr('Masculino')
+        phantom: true
+
+      Button
+        id: maleHit
+        anchors.fill: parent
+        opacity: 0
+        @onClick: CreateCharacter.selectGender(true)
+
+    GenderCard
+      id: genderFemale
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+
+      UIWidget
+        id: femaleImg
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        size: 80 120
+        image-source: images/gender_female.png
+        phantom: true
+
+      Label
+        id: femaleLabel
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-top: 8
+        color: #f0f0f0ff
+        font: terminus-14px-bold
+        !text: tr('Feminino')
+        phantom: true
+
+      Button
+        id: femaleHit
+        anchors.fill: parent
+        opacity: 0
+        @onClick: CreateCharacter.selectGender(false)
+
+  CreateCharacterButton
+    id: ccCreateButton
+    !text: tr('Criar')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-bottom: 55
+    @onClick: CreateCharacter.submit()
+
+  CreateCharacterButton
+    id: ccCancelButton
+    !text: tr('Cancelar')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: prev.bottom
+    margin-top: 10
+    @onClick: CreateCharacter.cancel()

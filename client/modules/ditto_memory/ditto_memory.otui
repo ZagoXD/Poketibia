@@ -1,0 +1,234 @@
+UIWindow
+  id: dittoMemoryWindow
+  text: Ditto Memory
+  width: 260
+  height: 118
+  image-source: styles/menu_full
+  focusable: false
+  draggable: true
+  moveable: true
+  opacity: 0.98
+  visible: false
+  &save: true
+
+  UILabel
+    id: title
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 5
+
+  UIWidget
+    id: content
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 24
+    width: 236
+    height: 86
+
+    UIWidget
+      id: memSlot1
+      size: 74 86
+      anchors.left: parent.left
+      anchors.top: parent.top
+
+      UIItem
+        id: portraitItem
+        size: 44 44
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        virtual: true
+        ignore-mouse: true
+        visible: false
+
+      UIImageView
+        id: portraitImg
+        size: 44 44
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        image-source: pokes/portait.png
+        ignore-mouse: true
+        visible: true
+
+        border-width: 1
+        border-color: #00000066
+        border-radius: 4
+
+      UIButton
+        id: btnUse
+        size: 68 18
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: portraitImg.bottom
+        margin-top: 4
+        text: Usar
+
+      UIWidget
+        id: rowBtns
+        size: 68 18
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: btnUse.bottom
+        margin-top: 3
+
+        UIButton
+          id: btnSave
+          size: 32 18
+          anchors.left: parent.left
+          text: Save
+          color: #ffffff
+          background-color: #2ecc71
+          background-color-hover: #27ae60
+          background-color-pressed: #1e8449
+          border-width: 1
+          border-color: #0e5a2e
+          border-radius: 4
+
+        UIButton
+          id: btnDel
+          size: 32 18
+          anchors.right: parent.right
+          text: Del
+          color: #ffffff
+          background-color: #e74c3c
+          background-color-hover: #c0392b
+          background-color-pressed: #992d22
+          border-width: 1
+          border-color: #7a1e19
+          border-radius: 4
+
+    UIWidget
+      id: memSlot2
+      size: 74 86
+      anchors.left: memSlot1.right
+      anchors.top: parent.top
+      margin-left: 7
+
+      UIItem
+        id: portraitItem
+        size: 44 44
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        virtual: true
+        ignore-mouse: true
+        visible: false
+
+      UIImageView
+        id: portraitImg
+        size: 44 44
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        image-source: pokes/portait.png
+        ignore-mouse: true
+        visible: true
+        border-width: 1
+        border-color: #00000066
+        border-radius: 4
+
+      UIButton
+        id: btnUse
+        size: 68 18
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: portraitImg.bottom
+        margin-top: 4
+        text: Usar
+
+      UIWidget
+        id: rowBtns
+        size: 68 18
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: btnUse.bottom
+        margin-top: 3
+
+        UIButton
+          id: btnSave
+          size: 32 18
+          anchors.left: parent.left
+          text: Save
+          color: #ffffff
+          background-color: #2ecc71
+          background-color-hover: #27ae60
+          background-color-pressed: #1e8449
+          border-width: 1
+          border-color: #0e5a2e
+          border-radius: 4
+
+        UIButton
+          id: btnDel
+          size: 32 18
+          anchors.right: parent.right
+          text: Del
+          color: #ffffff
+          background-color: #e74c3c
+          background-color-hover: #c0392b
+          background-color-pressed: #992d22
+          border-width: 1
+          border-color: #7a1e19
+          border-radius: 4
+
+    UIWidget
+      id: memSlot3
+      size: 74 86
+      anchors.left: memSlot2.right
+      anchors.top: parent.top
+      margin-left: 7
+
+      UIItem
+        id: portraitItem
+        size: 44 44
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        virtual: true
+        ignore-mouse: true
+        visible: false
+
+      UIImageView
+        id: portraitImg
+        size: 44 44
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        image-source: pokes/portait.png
+        ignore-mouse: true
+        visible: true
+        border-width: 1
+        border-color: #00000066
+        border-radius: 4
+
+      UIButton
+        id: btnUse
+        size: 68 18
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: portraitImg.bottom
+        margin-top: 4
+        text: Usar
+
+      UIWidget
+        id: rowBtns
+        size: 68 18
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: btnUse.bottom
+        margin-top: 3
+
+        UIButton
+          id: btnSave
+          size: 32 18
+          anchors.left: parent.left
+          text: Save
+          color: #ffffff
+          background-color: #2ecc71
+          background-color-hover: #27ae60
+          background-color-pressed: #1e8449
+          border-width: 1
+          border-color: #0e5a2e
+          border-radius: 4
+
+        UIButton
+          id: btnDel
+          size: 32 18
+          anchors.right: parent.right
+          text: Del
+          color: #ffffff
+          background-color: #e74c3c
+          background-color-hover: #c0392b
+          background-color-pressed: #992d22
+          border-width: 1
+          border-color: #7a1e19
+          border-radius: 4

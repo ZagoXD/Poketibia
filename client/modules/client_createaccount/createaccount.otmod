@@ -1,0 +1,16 @@
+Module
+  name: client_createaccount
+  description: Manages account creation
+  author: Zago
+  website: www.otclient.info
+
+  dependencies:
+    - client_topmenu
+    - client_entergame
+
+  @onLoad: |
+    dofile 'createaccount'
+    CreateAccount.init()
+
+  @onUnload: |
+    CreateAccount.terminate()

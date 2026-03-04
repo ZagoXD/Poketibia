@@ -1,0 +1,92 @@
+CharacterWidget < UIWidget
+  id: tvCamWindow
+  size: 250 120
+  anchors.centerIn: parent
+  @onEnter: modules.game_duel.hide()
+  @onEscape: modules.game_duel.hide()
+
+  UIButton
+    id: closeButton
+    @onClick: modules.game_tvcam.hide(2)
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: -3
+    margin-right: -2
+    size: 14 14
+    image-source: /images/ui/miniwindow_buttons
+    image-clip: 28 0 14 14
+
+    $hover:
+      image-clip: 28 14 14 14
+
+    $pressed:
+      image-clip: 28 28 14 14
+
+MainWindow
+  id: channelsWindow
+  !text: tr('TV Camera')
+  size: 230 160
+  visible: false
+
+  UIWidget
+    id: cameraImg
+    size: 32 32
+    image-source: /images/game/battle/camera
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    margin-right: 8
+
+  Label
+    id: channelNameLabel
+    !text: tr('Channel Name')
+    anchors.left: parent.horizontalCenter
+    text-auto-resize: true
+    margin-left: -60
+    margin-top: 10
+    phantom: true
+    @onClick: modules.game_duel.hide()
+
+  TextEdit
+    id: channelNameText
+    size: 160 20
+    enabled: true
+    anchors.top: channelNameLabel.bottom
+    anchors.left: channelNameLabel.horizontalCenter
+    margin-left: -40
+    margin-top: 5
+
+  OptionCheckBox
+    id: usePassword
+    !text: tr('Password')
+    anchors.top: channelNameLabel.bottom
+    margin-left: 37
+    margin-top: 20
+    @onCheckChange: self:getParent():getChildById('channelPasswordText'):setEnabled(self:isChecked())
+
+  TextEdit
+    id: channelPasswordText
+    size: 160 20
+    enabled: false
+    anchors.top: channelNameLabel.bottom
+    anchors.left: channelNameLabel.horizontalCenter
+    margin-left: -40
+    margin-top: 45
+
+  Button
+    id: cancelButton
+    !text: tr('Cancel')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+    @onClick: self:getParent():destroy()
+
+  Button
+    id: create
+    !text: tr('Create')
+    width: 64
+    anchors.right: cancelButton.right
+    anchors.top: cancelButton.bottom
+    anchors.top: cancelButton.top
+    margin-right: 72
+    @onClick: modules.game_tvcam.doRequestTvCamCreate()

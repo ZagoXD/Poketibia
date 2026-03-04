@@ -1,0 +1,103 @@
+SellingButton < UIButton
+  border-width: 1
+  border-color: #000000AA
+  background-color: #000000AA
+  @onClick: modules.game_shop.onBuyMarket(tonumber(self:getId()))
+
+  $hover:
+    border-color: #FFFFFF40
+    background-color: #FFFFFF40
+
+  $pressed:
+    border-color: #FFFFFF30
+    background-color: #FFFFFF30
+
+  Label
+    color: white
+    text-auto-resize: true
+    font: sans-bold-16px-rounded
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 5
+
+  Label
+    color: white
+    text-auto-resize: true
+    font: verdana-11px-rounded
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+
+  UIWidget
+    phantom: true
+    icon-offset: -15 0
+    icon-align: bottomleft
+    icon: /images/game/shop/sale
+    anchors.centerIn: parent
+    margin-top: 8
+
+  Label
+    color: white
+    text-auto-resize: true
+    icon-align: left
+    icon: /images/game/shop/prize
+    text-offset: 21 0
+    font: verdana-11px-rounded
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 5
+
+Panel
+  ScrollablePanel
+    id: shopMarket
+    anchors.fill: parent
+    margin-right: 17
+    vertical-scrollbar: shopMarketScrollBar
+    layout:
+      type: grid
+      cell-size: 136 105
+      cell-spacing: 10
+      flow: true
+
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+
+  VerticalScrollBar
+    id: shopMarketScrollBar
+    anchors.top: shopMarket.top
+    anchors.left: shopMarket.right
+    anchors.bottom: shopMarket.bottom
+    margin-left: 5
+    step: 25
+    pixels-scroll: true

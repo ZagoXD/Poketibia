@@ -1,0 +1,135 @@
+TradeButton < Panel
+  size: 62 29
+  focusable: false
+  draggable: false
+  image-source: /images/others/buybutton.png
+  image-repeat: false
+  opacity: 1.0
+
+UIWindow
+  id: shinypanel
+  size: 775 417
+  anchors.centerIn: parent
+  draggable: true
+  focusable: true
+  @onEscape: self:destroy()
+
+  Panel
+    id: background
+    anchors.fill: parent
+    image-source: /images/others/panel2.png
+    image-repeat: false
+
+  Button
+    id: close
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 6
+    margin-left: 6
+    size: 28 28
+    text: ""
+    image-source: /images/others/closebutton.png
+    image-size: 28 28
+    image-clip: 0 0 28 28
+    image-repeat: false
+    image-color: white
+    opacity: 0.95
+    @onClick: self:getParent():destroy()
+
+  TradeButton
+    id: buy1
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 76
+    margin-left: 249
+
+  TradeButton
+    id: buy2
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 176
+    margin-left: 249
+
+  TradeButton
+    id: buy3
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 276
+    margin-left: 249
+
+  TradeButton
+    id: buy4
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 76
+    margin-left: 389
+
+  TradeButton
+    id: buy5
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 176
+    margin-left: 389
+
+  TradeButton
+    id: buy6
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 276
+    margin-left: 389
+
+  TradeButton
+    id: buy7
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 76
+    margin-left: 529
+
+  TradeButton
+    id: buy8
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 176
+    margin-left: 529
+
+  TradeButton
+    id: buy9
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 276
+    margin-left: 529
+
+  TradeButton
+    id: buy10
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 376
+    margin-left: 529
+
+  TradeButton
+    id: buy11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 76
+    margin-left: 669
+
+  TradeButton
+    id: buy12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 176
+    margin-left: 669
+
+  TradeButton
+    id: buy13
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 276
+    margin-left: 669
+
+  TradeButton
+    id: buy14
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 376
+    margin-left: 669

@@ -1,0 +1,142 @@
+CreateAccountWindow < UIWidget
+  id: createAccountWindow
+  anchors.centerIn: parent
+  size: 420 640
+  padding: 0
+  draggable: true
+  @onEscape: CreateAccount.cancel()
+
+CreateAccountButton < LoginButton
+  width: 360
+  height: 25
+
+CreateAccountWindow
+  Panel
+    id: loginBg
+    anchors.centerIn: parent
+    size: 400 620
+    focusable: false
+    image-source: /images/ui/login/panel_flat
+    image-border: 2
+    image-border-top: 3
+    image-border-bottom: 3
+    opacity: 0.8
+
+  UIWidget
+    id: content
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    size: 400 520
+    margin-top: 20
+
+    MenuLabel
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px
+
+    MenuLabel
+      !text: tr('Account name')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 24
+      margin-left: -115
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px
+
+    TextEdit
+      id: caAccountText
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      focus: true
+      color: #ffffffff
+      font: terminus-14px-bold
+      width: 360
+      height: 34
+      padding: 8 10 8 10
+      text-offset: 0 1
+
+    MenuLabel
+      !text: tr('Email')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 18
+      margin-left: -150
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px
+
+    TextEdit
+      id: caEmailText
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      color: #ffffffff
+      font: terminus-14px-bold
+      width: 360
+      height: 34
+      padding: 8 10 8 10
+      text-offset: 0 1
+
+    MenuLabel
+      !text: tr('Senha')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 18
+      margin-left: -150
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px
+
+    PasswordTextEdit
+      id: caPassText
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      color: #ffffffff
+      font: terminus-14px-bold
+      width: 360
+      height: 34
+      padding: 8 10 8 10
+      text-offset: 0 1
+
+    MenuLabel
+      !text: tr('Confirmar senha')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 18
+      margin-left: -110
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px
+
+    PasswordTextEdit
+      id: caPass2Text
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      color: #ffffffff
+      font: terminus-14px-bold
+      width: 360
+      height: 34
+      padding: 8 10 8 10
+      text-offset: 0 1
+
+    CreateAccountButton
+      !text: tr('Criar')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      width: 360
+      margin-top: 50
+      @onClick: CreateAccount.submit()
+
+    CreateAccountButton
+      !text: tr('Cancelar')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      width: 360
+      margin-top: 10
+      @onClick: CreateAccount.cancel()

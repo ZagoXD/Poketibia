@@ -1,0 +1,13 @@
+Module
+  name: Bar Poke
+  description: BarPokemon
+  author: Nathso
+  website: none
+
+  autoload: true
+  autoload-priority: 1000
+
+  scripts: [ barpoke ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

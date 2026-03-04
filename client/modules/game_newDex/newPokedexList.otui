@@ -1,0 +1,72 @@
+Close2 < Button
+  image-source: interface/fechar
+  size: 18 18
+  anchors.left: parent.left
+  margin-left: 268
+  @onClick: hide()
+  
+buttonList2 < UIWidget
+  image-source: interface/buttonList
+  size: 290 44
+  
+fotoPoke < UIWidget
+  size: 35 35
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-left:20
+  margin-top:5
+  
+pokeName < Label
+  font: sans-bold-16px
+  text-offset: -3 -3
+  width: 230
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 3
+  margin-left: 35
+  text-align: center
+  
+dexName < Label
+  !text: 'PokeDex'
+  font: sans-bold-16px
+  text-offset: -3 -3
+  width: 100
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 3
+  margin-left: 95
+  text-align: center
+  
+MainWindow
+  id: optionsWindow
+  size: 320  490
+  image-source: interface/listaDex.png
+  draggable: false
+  &save: true
+  @onEscape: self:hide()
+  
+  Close
+    id: close
+    anchors.top: parent.top
+    margin-top: 0
+
+  VerticalScrollBar
+    id: currentHotkeysScrollBar
+    height: 400
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    step: 14
+    pixels-scroll: true
+
+  TextList
+    id: listaPokedex
+    height: 300
+    vertical-scrollbar: currentHotkeysScrollBar
+    anchors.left: parent.left
+    anchors.right: prev.left
+    anchors.top: prev.top
+    anchors.bottom: prev.bottom
+    focusable: false
+
+  dexName
+    id:nomeDex

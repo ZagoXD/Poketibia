@@ -1,0 +1,124 @@
+Slot < UIButton
+  id: slot
+  size: 175 52
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: -20
+  margin-top: 0
+  image-source: styles/menu
+  opacity: 0.98
+  focusable: false
+
+  UIItem
+    id: pokePortraitItem
+    size: 38 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 9
+    margin-top: 7
+    ignore-mouse: true
+    focusable: false
+    virtual: true
+
+  UIImageView
+    id: pokePortrait
+    size: 38 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 8
+    margin-top: 6
+    image-source: styles/borda
+    visible: false
+
+  UIImageView
+    id: pokeBorder
+    size: 38 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 8
+    margin-top: 6
+    image-source: styles/borda
+
+  Label
+    id: pokeName
+    size: 104 14
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 4
+    text-align: center
+
+  ProgressBar
+    id: barHp
+    size: 73 6
+    anchors.top: prev.top
+    anchors.left: parent.left
+    margin-left: 79
+    margin-top: 18
+    border: 1 alpha
+    background-color: black
+
+  UIImageView
+    id: hpFrame
+    size: 86 6
+    anchors.top: barHp.top
+    anchors.left: barHp.left
+    opacity: 0.9
+    focusable: false
+    ignore-mouse: true
+
+
+
+  UIImageView
+    id: up
+    size: 11 14
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 70
+    margin-top: 30
+    image-source: styles/up
+    opacity: 0.65
+
+  UIImageView
+    id: down
+    size: 11 14
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 56
+    margin-top: 30
+    image-source: styles/down
+    opacity: 0.65
+
+  Label
+    id: pokeHp
+    size: 86 12
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 79
+    margin-top: 30
+    text-align: center
+    font: terminus-10px
+
+  UIButton
+    id: pokeDeath
+    size: 173 50
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 1
+    margin-top: 1
+    background-color: black
+    opacity: 0.5
+    visible: false
+
+
+UIWindow
+  id: pokeBar
+  image-source: styles/menu_full
+  anchors.horizontalCenter: parent.horizontalCenter
+  anchors.bottom: parent.bottom
+  width: 190
+  focusable: false
+  &save: true
+  opacity: 1.0
+  margin-right: 419
+  margin-bottom: 374

@@ -1,0 +1,52 @@
+UIWindow
+  id: confirmBuy
+  size: 420 170
+  anchors.centerIn: parent
+  draggable: true
+  focusable: true
+  @onEscape: self:destroy()
+
+  Panel
+    id: backdrop
+    anchors.fill: parent
+    image-repeat: false
+    background-color: #000000e6
+    focusable: false
+
+  Panel
+    id: buttonsRow
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    height: 44
+
+    Button
+      id: no
+      text: "Nao"
+      width: 120
+      height: 28
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 16
+
+    Button
+      id: yes
+      text: "Sim"
+      width: 120
+      height: 28
+      anchors.right: parent.right
+      anchors.verticalCenter: parent.verticalCenter
+      margin-right: 16
+
+  Label
+    id: msg
+    text: "Voce quer trocar 20x X e 5x Shiny Dust por 1x Y. Confirmar?"
+    text-wrap: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: buttonsRow.top
+    margin-top: 14
+    margin-left: 16
+    margin-right: 16
+    margin-bottom: 8

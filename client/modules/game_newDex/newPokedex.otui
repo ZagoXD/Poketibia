@@ -1,0 +1,256 @@
+pokeFoto < UIButton
+  width: 120
+  height: 115
+  anchors.top: parent.top
+  margin-top: 32
+  font: verdana-11px-rounded
+  color: #FFFFFF
+  text-align: left
+  
+pokeGen < UIButton
+  width: 51
+  height: 18
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 40
+  
+pokeTipo < UIButton
+  width: 51
+  height: 18
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 40
+  
+pokeTipo2 < UIButton
+  width: 51
+  height: 18
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 40
+  
+ListMoves < TextList
+  width: 200px
+  height: 100px
+
+Close < UIButton
+  image-source: interface/fechar
+  size: 18 18
+  anchors.left: parent.left
+  margin-left: 268
+  @onClick: hide()
+
+Info < UIButton
+  image-source: interface/btnInfo
+  size: 19 30
+  anchors.left: parent.left
+  margin-left: 268
+  @onClick: hide()
+
+Moves < UIButton
+  image-source: interface/btnMove
+  size: 22 30
+  anchors.left: parent.left
+  margin-left: 268
+  @onClick: hide()
+
+Volta < UIButton
+  image-source: interface/voltar
+  size: 23 18
+  anchors.left: parent.left
+  margin-left: 5
+  
+pokeName < Label
+  font: sans-bold-16px
+  text-offset: -3 -3
+  width: 230
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 3
+  margin-left: 35
+  text-align: center
+  
+infoPoke < Label
+  font: terminus-10px
+  text-offset: -3 -3
+  width: 50
+  height: 85
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 60
+  margin-left: 100
+  text-align: right
+  
+infoPoke2 < Label
+  font: terminus-10px
+  text-offset: -3 -3
+  width: 155
+  height: 85
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 60
+  margin-left: 160
+  text-align: left
+  
+infoEvu < Label
+  font: terminus-14px-bold
+  text-offset: -3 -3
+  width: 290
+  height: 65
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 300
+  margin-left: 0
+  text-align: center
+  
+infoHabi < Label
+  font: terminus-14px-bold
+  text-offset: -3 -3
+  width: 290
+  height: 65
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 393
+  margin-left: 0
+  text-align: center
+  
+statusPoke < Label
+  font: terminus-14px-bold
+  text-offset: -3 -3
+  width: 30
+  height: 110
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 167
+  text-align: left
+
+hpBar < ProgressBar
+  width:180
+  height: 5
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: 86
+  margin-top: 178
+  background-color:blue
+
+atackBar < ProgressBar
+  width:180
+  height: 5
+  max: 300
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: 86
+  margin-top: 194
+  background-color:blue
+
+defenseBar < ProgressBar
+  width:180
+  height: 5
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: 86
+  margin-top: 210
+  background-color:blue
+
+spaBar < ProgressBar
+  width:180
+  height: 5
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: 86
+  margin-top: 225
+  background-color:blue
+
+spdBar < ProgressBar
+  width:180
+  height: 5
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: 86
+  margin-top: 241
+  background-color:blue
+
+speedBar < ProgressBar
+  width:180
+  height: 5
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-left: 86
+  margin-top: 256
+  background-color:blue
+
+MainWindow
+  id: optionsWindow
+  size: 340  538
+  image-source: interface/pokedex.png
+  draggable: true
+  &save: true
+  @onEscape: self:hide()
+  
+  Close
+    id: close
+    anchors.top: parent.top
+    margin-top: 0
+
+  Moves
+    id: close
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 470
+    margin-left: 135
+    @onClick: showMoveList()
+
+  pokeName
+    id: pokeName
+
+  infoPoke
+    id: infoPoke
+
+  infoPoke2
+    id: infoPoke2
+
+  infoEvu
+    id: infoEvu
+
+  infoHabi
+    id: infoHabi
+
+  pokeFoto
+    id: pokeFoto
+    anchors.left: parent.left
+    margin-left: -10
+  
+  pokeGen
+    id: pokeGen
+    margin-left: 100
+  
+  pokeTipo
+    id: pokeTipo
+    margin-left: 141
+  
+  pokeTipo2
+    id: pokeTipo2
+    margin-left: 182
+  
+  statusPoke
+    id: statusPoke
+    margin-left: 60
+  
+  hpBar
+    id:hpBar
+  
+  atackBar
+    id:atackBar
+  
+  defenseBar
+    id:defenseBar
+  
+  spaBar
+    id:spaBar
+  
+  spdBar
+    id:spdBar
+  
+  speedBar
+    id:speedBar
+  
+  

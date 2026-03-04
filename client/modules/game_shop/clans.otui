@@ -1,0 +1,41 @@
+SellingButton < UIWidget
+  width: 83
+  border-width: 1
+  image-color: #757575
+  @onClick: modules.game_shop.onBuyClan(tonumber(self:getId()))
+
+  $hover:
+    image-color: #FFFFFF
+
+  $pressed:
+    image-color: #AAAAAA
+
+Panel
+  ScrollablePanel
+    id: shopClans
+    anchors.fill: parent
+    margin-top: 22
+    margin-bottom: 22
+    horizontal-scrollbar: clansOutfitsScrollBar
+    layout:
+      type: horizontalBox
+      spacing: 10
+
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+    SellingButton
+
+  HorizontalScrollBar
+    id: clansOutfitsScrollBar
+    anchors.left: shopClans.left
+    anchors.right: shopClans.right
+    anchors.top: shopClans.bottom
+    margin-top: 5
+    step: 50
+    pixels-scroll: true

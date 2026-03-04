@@ -1,0 +1,81 @@
+Volta < UIButton
+  image-source: interface/voltar
+  size: 23 18
+  anchors.left: parent.left
+  margin-left: 5
+  
+moveLevel < Label
+  font: sans-bold-16px
+  text-offset: -3 -3
+  width: 30
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 15
+  text-align: center
+  border-color: #000000
+  
+moveName < Label
+  !text: 'Moves'
+  font: sans-bold-16px
+  text-offset: -3 -3
+  width: 100
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-top: 3
+  margin-left: 95
+  text-align: center
+  
+typeMove < UIButton
+  width: 51
+  height: 18
+  anchors.top: parent.top
+  anchors.right: parent.right
+  margin-top: 12
+  margin-right: 10
+  
+buttonList < UIWidget
+  image-source: interface/bgMoves
+  size: 290 44
+  border-top: 2
+  border-color: #000000
+  
+fotoPoke < UIWidget
+  size: 35 35
+  anchors.left: parent.left
+  anchors.top: parent.top
+  margin-left:20
+  margin-top:5
+MainWindow
+  id: optionsWindow
+  size: 320  490
+  image-source: interface/listaDex.png
+  draggable: false
+  margin-top:137
+  @onEscape: self:hide()
+
+  Volta
+    id: close
+    anchors.top: parent.top
+    margin-top: 0
+    @onClick: hideMoves()
+
+  VerticalScrollBar
+    id: currentHotkeysScrollBar
+    height: 400
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    step: 14
+    pixels-scroll: true
+
+  TextList
+    id: movesPokedex
+    height: 400
+    vertical-scrollbar: currentHotkeysScrollBar
+    anchors.left: parent.left
+    anchors.right: prev.left
+    anchors.top: prev.top
+    anchors.bottom: prev.bottom
+    focusable: false
+
+  moveName
+    id: moveName

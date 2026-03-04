@@ -1,0 +1,11 @@
+Module
+  name: marketui
+  description: Simple market window (list/buy/sell)
+  author: Nathso
+  autoload: true
+  autoload-priority: 715
+  dependencies: [ game_interface, client_topmenu ]
+  scripts: [ marketui ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

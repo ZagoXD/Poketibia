@@ -1,0 +1,18 @@
+MainWindow
+  id: placa
+  size:261 38
+  &save: true
+  image-source: img/bar
+  opacity: 40
+  focusable: false
+  
+  Label
+    id:nome
+    size:248 20
+    text-align: center
+    font: sans-bold-16px
+    !text: tr('Cerulean!')
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top:-20
+    margin-left:3

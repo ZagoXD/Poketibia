@@ -1,0 +1,11 @@
+Module
+  name: shinypanel
+  description: Simple Shiny Panel
+  author: Nathso
+  autoload: true
+  autoload-priority: 725
+  dependencies: [ game_interface ]
+  scripts: [ shinypanel ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

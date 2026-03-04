@@ -1,0 +1,264 @@
+CharacterListButton < LoginButton
+  width: 360
+  height: 25
+
+CharacterListLabel < MenuLabel
+  text-auto-resize: true
+  color: #f0f0f0ff
+  font: sans-bold-16px
+
+
+CharacterWidget < UIWidget
+  height: 118
+  margin: 4
+  padding: 10
+  background-color: alpha
+
+  &updateOnStates: |
+    function(self)
+      local children = self:recursiveGetChildren()
+      for i=1,#children do
+        children[i]:setOn(self:isFocused())
+      end
+    end
+  @onFocusChange: self:updateOnStates()
+  @onSetup: self:updateOnStates()
+
+  $focus:
+    background-color: #ffffff22
+
+  UIWidget
+    id: outfitBox
+    size: 72 72
+    anchors.left: parent.left
+    anchors.verticalCenter: parent.verticalCenter
+    background-color: #00000033
+    border-width: 1
+    border-color: #00000066
+
+    $on:
+      border-color: #3fa9ffcc
+      background-color: #3fa9ff22
+
+    UICreature
+      id: outfit
+      anchors.centerIn: parent
+      size: 64 64
+      background-color: alpha
+
+  UIWidget
+    id: infoBox
+    anchors.left: outfitBox.right
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-left: 12
+    background-color: alpha
+
+    Label
+      id: name
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 6
+      font: sans-bold-16px
+      color: #dcdcdcff
+      text-auto-resize: true
+      background-color: alpha
+
+      $on:
+        color: #ffffff
+
+    Label
+      id: level
+      anchors.top: name.bottom
+      anchors.left: parent.left
+      anchors.right: pokeballsImage.left
+      margin-top: 2
+      margin-right: 8
+      font: terminus-14px-bold
+      color: #aaaaaaff
+      text-auto-resize: true
+      background-color: alpha
+      &baseText: 'Level %s'
+
+      $on:
+        color: #ffffff
+
+    UIWidget
+      id: pokeballsImage
+      anchors.right: parent.right
+      anchors.top: parent.top
+      margin-top: 26
+      margin-right: 2
+      size: 105 15
+      image-source: /images/game/pokemon/pokeball0.png
+      opacity: 0.95
+
+      $on:
+        opacity: 1.0
+
+    UIWidget
+      id: hpBar
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: level.bottom
+      margin-top: 6
+      height: 14
+      background-color: #00000066
+      border-width: 1
+      border-color: #000000aa
+
+      UIWidget
+        id: hpFill
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        width: 0
+        background-color: #cc2b2bff
+
+
+    Label
+      id: hpLabel
+      anchors.left: hpBar.left
+      anchors.right: hpBar.right
+      anchors.verticalCenter: hpBar.verticalCenter
+      margin-left: 6
+      margin-right: 6
+      font: terminus-14px-bold
+      color: #ffffff
+      text-align: center
+      text: "0/0"
+      background-color: alpha
+
+    Label
+      id: worldName
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      margin-bottom: 4
+      font: terminus-14px-bold
+      color: #aaaaaaff
+      text-auto-resize: true
+      background-color: alpha
+      &baseText: '(%s)'
+
+      $on:
+        color: #ffffff
+
+
+
+LoginWindow
+  id: charactersWindow
+  !text: tr('Character List')
+  size: 680 680
+  visible: false
+  @onEnter: CharacterList.doLogin()
+  @onEscape: CharacterList.hide(true)
+  @onSetup: |
+    g_keyboard.bindKeyPress('Up', function() self:recursiveGetChildById('characters'):focusPreviousChild(KeyboardFocusReason) end, self)
+    g_keyboard.bindKeyPress('Down', function() self:recursiveGetChildById('characters'):focusNextChild(KeyboardFocusReason) end, self)
+
+  Panel
+    id: loginBg
+    anchors.centerIn: parent
+    size: 720 720
+    focusable: false
+
+  UIWidget
+    id: content
+    anchors.centerIn: parent
+    size: 640 640
+    margin-top: 10
+
+    CharacterListLabel
+      id: titleLabel
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+
+    VerticalScrollBar
+      id: characterListScrollBar
+      anchors.top: titleLabel.bottom
+      anchors.bottom: accountStatusCaption.top
+      anchors.right: parent.right
+      margin-top: 18
+      margin-bottom: 10
+      step: 110
+      pixels-scroll: true
+
+    TextList
+      id: characters
+      image-source: /images/ui/login/panel_flat
+      image-border: 2
+      image-border-top: 3
+      image-border-bottom: 3
+      anchors.top: titleLabel.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: accountStatusCaption.top
+      margin-top: 18
+      margin-bottom: 10
+      margin-right: 18
+      padding: 8
+      focusable: false
+      vertical-scrollbar: characterListScrollBar
+      auto-focus: first
+
+    CharacterListLabel
+      id: accountStatusCaption
+      !text: tr('Account Status') .. ':'
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: accountStatusLabel.top
+      margin-bottom: 4
+
+    Label
+      id: accountStatusLabel
+      !text: tr('Free Account')
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: separator.top
+      margin-bottom: 10
+      text-auto-resize: true
+      color: #f0f0f0ff
+      font: terminus-14px-bold
+
+      $on:
+        color: #FF0000
+
+    HorizontalSeparator
+      id: separator
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: buttonsRow.top
+      margin-bottom: 14
+
+    UIWidget
+      id: buttonsRow
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      height: 100
+
+      CharacterListButton
+        id: buttonOk
+        !text: tr('Ok')
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
+        @onClick: CharacterList.doLogin()
+
+      CharacterListButton
+        id: buttonCreate
+        !text: tr('Create')
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: prev.bottom
+        margin-top: 10
+        @onClick: CharacterList.openCreateCharacter()
+
+      CharacterListButton
+        id: buttonCancel
+        !text: tr('Cancel')
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: prev.bottom
+        margin-top: 10
+        @onClick: CharacterList.hide(true)

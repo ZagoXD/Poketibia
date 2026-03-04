@@ -1,0 +1,13 @@
+Module
+  name: Ditto Memory
+  description: UI para slots de memória do Ditto
+  author: Nathso
+  website: none
+
+  autoload: true
+  autoload-priority: 1001
+
+  scripts: [ ditto_memory ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

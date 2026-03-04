@@ -1,0 +1,13 @@
+Module
+  name: NewPokedex
+  description: Pokdex
+  author: Jeffs
+  website: pokedub.zapto.org:8080/
+
+  autoload: true
+  autoload-priority: 1000
+
+  scripts: [ newPokedex ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

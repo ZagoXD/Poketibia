@@ -1,0 +1,16 @@
+Module
+  name: client_createcharacter
+  description: Manages character creation
+  author: Zago
+  website: www.otclient.info
+
+  dependencies:
+    - client_topmenu
+    - client_entergame
+
+  @onLoad: |
+    dofile 'createcharacter'
+    CreateCharacter.init()
+
+  @onUnload: |
+    CreateCharacter.terminate()

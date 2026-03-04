@@ -1,0 +1,130 @@
+EnterGameWindow < UIWidget
+  anchors.centerIn: parent
+  size: 420 540
+  padding: 0
+  draggable: true
+
+EnterGameButton < LoginButton
+  width: 360
+  height: 25
+
+EnterGameWindow
+  id: enterGame
+  @onEnter: EnterGame.doLogin()
+
+  Panel
+    id: loginBg
+    anchors.centerIn: parent
+    size: 400 520
+    focusable: false
+    image-source: /images/ui/login/panel_flat
+    image-border: 2
+    image-border-top: 3
+    image-border-bottom: 3
+    opacity: 0.8
+
+  UIWidget
+    id: content
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    size: 400 420
+    margin-top: 30
+
+    MenuLabel
+      !text: tr('Account name')
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-left: -120
+      anchors.top: parent.top
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px 
+
+    TextEdit
+      id: accountNameTextEdit
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      focus: true
+      color: #ffffffff
+      font: terminus-14px-bold
+      width: 360
+      height: 34
+      padding: 8 10 8 10
+      text-offset: 0 1
+      @onEnter: EnterGame.doLogin()
+
+    MenuLabel
+      !text: tr('Password')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-left: -150
+      margin-top: 18
+      text-auto-resize: true
+      color: #ffffffff
+      font: sans-bold-16px 
+
+    PasswordTextEdit
+      id: accountPasswordTextEdit
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      color: #ffffffff
+      font: terminus-14px-bold
+      width: 360
+      height: 34
+      padding: 8 10 8 10
+      text-offset: 0 1
+      @onEnter: EnterGame.doLogin()
+
+    CheckBox
+      id: rememberPasswordBox
+      !text: tr('Remember password')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 20
+      width: 380
+      height: 22
+      color: #ffffffff
+      font: terminus-14px-bold
+      @onCheckChange: self:getParent():getChildById('autoLoginBox'):setEnabled(self:isChecked())
+
+    CheckBox
+      id: autoLoginBox
+      enabled: false
+      !text: tr('Auto login')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      margin-top: 10
+      width: 380
+      color: #ffffffff
+      font: terminus-14px-bold
+      height: 22
+
+    EnterGameButton
+      !text: tr('Login')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      width: 360
+      color: #ffffffff
+      margin-top: 60
+      @onClick: EnterGame.doLogin()
+
+    EnterGameButton
+      id: createAccountButton
+      !text: tr('Criar Conta')
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: prev.bottom
+      color: #ffffffff
+      width: 360
+      margin-top: 10
+      @onClick: EnterGame.openCreateAccount()
+
+  Label
+    id: serverInfoLabel
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 12
+    margin-bottom: 10
+    color: green
+    text-auto-resize: true
+    font: terminus-14px-bold 
